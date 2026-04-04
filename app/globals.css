@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* TradeFundrr Brand Colors */
+  --color-tf-bg: #121418;
+  --color-tf-surface: #1A1D22;
+  --color-tf-border: #21242B;
+
+  --color-tf-primary: #0045E0;
+  --color-tf-primary-hover: #0037B3;
+  --color-tf-primary-pressed: #00267D;
+
+  --color-tf-accent: #05C4A1;
+  --color-tf-accent-hover: #049D81;
+  --color-tf-accent-pressed: #036E5A;
+
+  --color-tf-success: #29A361;
+  --color-tf-success-hover: #21824E;
+  --color-tf-success-pressed: #175B36;
+
+  --color-tf-text: #FFFFFF;
+  --color-tf-muted: #CCCCCC;
+  --color-tf-subtle: #8E8E8E;
+
+  /* Font families */
+  --font-heading: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-body: var(--font-open-sans), "Open Sans", system-ui, sans-serif;
+  --font-sans: var(--font-open-sans), "Open Sans", system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-tf-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-tf-glow-blue: 0 0 20px rgba(0, 69, 224, 0.25);
+  --shadow-tf-glow-accent: 0 0 20px rgba(5, 196, 161, 0.2);
+}
+
+/* Base styles */
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-tf-bg);
+  color: var(--color-tf-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* ─── Reusable Component Classes ─── */
+
+@layer components {
+  /* Page wrapper */
+  .tf-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  /* Static card */
+  .tf-card {
+    background-color: var(--color-tf-surface);
+    border: 1px solid var(--color-tf-border);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-tf-card);
+  }
+
+  /* Interactive card — base only, hover/transitions via utility classes */
+  .tf-card-interactive {
+    background-color: var(--color-tf-surface);
+    border: 2px solid var(--color-tf-border);
+    border-radius: 0.75rem;
+    cursor: pointer;
+  }
+
+  /* Primary button */
+  .tf-button-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--color-tf-primary);
+    transition: background-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  .tf-button-primary:hover {
+    background-color: var(--color-tf-primary-hover);
+    box-shadow: var(--shadow-tf-glow-blue);
+  }
+
+  .tf-button-primary:active {
+    background-color: var(--color-tf-primary-pressed);
+  }
+
+  .tf-button-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-tf-bg), 0 0 0 4px var(--color-tf-primary);
+  }
+
+  .tf-button-primary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* Secondary button */
+  .tf-button-secondary {
+    display: block;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-tf-border);
+    background-color: var(--color-tf-surface);
+    text-align: left;
+    transition: border-color 150ms ease;
+  }
+
+  .tf-button-secondary:hover {
+    border-color: var(--color-tf-primary);
+  }
+
+  /* Badges */
+  .tf-badge-success {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: rgba(41, 163, 97, 0.15);
+    color: var(--color-tf-success);
+  }
+
+  .tf-badge-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: rgba(5, 196, 161, 0.15);
+    color: var(--color-tf-accent);
+  }
+
+  /* Input-like shell for credential fields */
+  .tf-input-shell {
+    background-color: var(--color-tf-bg);
+    border: 1px solid var(--color-tf-border);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-family: ui-monospace, monospace;
+    color: var(--color-tf-text);
+  }
+
+  /* Disclaimer */
+  .tf-disclaimer {
+    background-color: rgba(5, 196, 161, 0.08);
+    border: 1px solid rgba(5, 196, 161, 0.2);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  /* Progress bar */
+  .tf-progress-track {
+    height: 0.375rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 9999px;
+    background-color: var(--color-tf-border);
+  }
+
+  .tf-progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--color-tf-primary), var(--color-tf-accent));
+    transition: width 500ms ease-out;
+  }
+}
+

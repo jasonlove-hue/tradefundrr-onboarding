@@ -1,0 +1,93 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { getOnboarding, saveOnboarding } from "@/lib/storage";
+import { platforms } from "@/config/onboarding";
+
+export default function Platform() {
+  const router = useRouter();
+  const [assetClass, setAssetClass] = useState<string | null>(null);
+
+  useEffect(() => {
+    const data = getOnboarding();
+    if (!data) {
+      router.push("/");
+      return;
+    }
+    setAssetClass(data.assetClass);
+  }, [router]);
+
+  function handleSelect(platformId: string) {
+    const data = getOnboarding();
+    if (!data) return;
+    saveOnboarding({ ...data, platform: platformId });
+    router.push("/tutorial");
+  }
+
+  if (!assetClass) return null;
+
+  if (assetClass === "stocks") {
+    return (
+      <div className="tf-page">
+        <div className="tf-card w-full max-w-lg p-10 text-center">
+          <h1 className="text-3xl text-tf-text">
+            Your Platform
+          </h1>
+          <p className="mt-4 text-lg text-tf-muted">
+            You will be using the{" "}
+            <span className="font-semibold text-tf-accent">
+              TradeFundrr Web Platform
+            </span>{" "}
+            to trade stocks.
+          </p>
+          <p className="mt-4 text-tf-subtle">
+            No download required — accessible from any browser.
+          </p>
+          <p className="mt-2 text-sm text-tf-subtle">
+            You can change this later if needed.
+          </p>
+          <p className="mt-6 text-xs text-tf-subtle">Next: Platform Setup</p>
+          <button
+            onClick={() => handleSelect("tradefundrr-web")}
+            className="tf-button-primary mt-4"
+          >
+            Select Platform
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const platformOptions = platforms[assetClass] || [];
+
+  return (
+    <div className="tf-page">
+      <div className="w-full max-w-2xl text-center">
+        <h1 className="text-3xl text-tf-text">
+          Choose Your Platform
+        </h1>
+        <p className="mt-3 text-lg text-tf-muted">
+          Select the trading platform you'd like to use.
+        </p>
+        <p className="mt-2 text-sm text-tf-subtle">
+          You can change this later if needed.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {platformOptions.map((platform) => (
+            <button
+              key={platform.id}
+              onClick={() => handleSelect(platform.id)}
+              className="tf-card-interactive p-8 text-left shadow-[0_1px_3px_rgba(0,0,0,0.3)] translate-y-0 transition-all duration-200 ease-out hover:translate-y-[-2px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.4),0_0_20px_rgba(0,69,224,0.15)] hover:border-tf-primary focus:outline-none focus:border-tf-primary focus:shadow-[0_0_0_2px_#0045E0,0_0_20px_rgba(0,69,224,0.25)]"
+            >
+              <h2 className="text-xl font-semibold text-tf-text">
+                {platform.title}
+              </h2>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
