@@ -218,4 +218,198 @@ export const rulesContent: Record<string, AssetRules> = {
     acknowledgment:
       "I understand and agree to follow these stocks trading rules.",
   },
+
+  "options-incubator": {
+    title: "Options Incubator Trading Rules",
+    lastUpdated: "2026-04-04",
+    intro:
+      "Review these key rules before trading in your simulated options incubator account.",
+
+    riskHighlight: {
+      title: "Important to Know",
+      text: "Trades held for 30 seconds or less are flagged, and profitable trades in that window may be removed from the account balance.",
+    },
+
+    summarySections: [
+      {
+        title: "Account Limits",
+        takeaway: "Stay within risk limits to keep your account active.",
+        items: [
+          "Account size: $25,000",
+          "Daily loss limit: $1,000",
+          "Max end-of-day drawdown: $3,750",
+          "Weekly payouts unlocked at $1,250 profit target",
+          "Drawdown high-water mark: $25,000",
+        ],
+      },
+      {
+        title: "Drawdown Rules",
+        takeaway:
+          "Understand how your trailing drawdown behaves over time.",
+        items: [
+          "Once trailing drawdown matches your initial balance, it stops trailing",
+          "The drawdown is then locked at that level for the duration of the evaluation",
+          "This can create more flexibility in managing trades once a cushion is established",
+        ],
+      },
+      {
+        title: "Trading Rules",
+        takeaway:
+          "Avoid restricted behavior and follow platform execution rules.",
+        items: [
+          "Trades held for 30 seconds or less are flagged",
+          "If a trade held 30 seconds or less is profitable, it will be removed from the account balance",
+          "If the trade is a complex strategy, notify support@tradefundrr.com",
+          "All trading must follow TradeFundrr platform rules and execution requirements",
+        ],
+      },
+      {
+        title: "Payout Terms",
+        takeaway: "Understand how and when payouts are issued.",
+        items: [
+          "Profit split: 80/20",
+          "Payout cycle: Weekly",
+          "Minimum payout amount: $250",
+          "Maximum payout amount: $15,000",
+        ],
+      },
+    ],
+
+    fullRules: [
+      {
+        title: "Account Parameters",
+        body: [
+          "Account size is $25,000.",
+          "Daily loss limit is $1,000.",
+          "Maximum end-of-day drawdown is $3,750.",
+          "Weekly payouts unlock at a $1,250 profit target.",
+          "Drawdown high-water mark is $25,000.",
+        ],
+      },
+      {
+        title: "Drawdown High-Water Mark",
+        body: [
+          "Once your trailing drawdown matches your initial balance, it will no longer trail and will be locked in at that level for the duration of the evaluation.",
+          "This allows you to establish a cushion and enjoy a higher maximum drawdown, providing greater flexibility in managing your trades.",
+        ],
+      },
+      {
+        title: "Trading Restrictions",
+        body: [
+          "If a trade is held for 30 seconds or less, it will be flagged on your dashboard, and if it was profitable, it will be removed from the account balance.",
+          "If the trade is a complex strategy, please notify support@tradefundrr.com.",
+          "All trading must follow TradeFundrr platform rules and execution requirements.",
+        ],
+      },
+      {
+        title: "Payout Structure",
+        body: [
+          "Profit split is 80/20.",
+          "Payout cycle is weekly.",
+          "Minimum payout amount is $250.",
+          "Maximum payout amount is $15,000.",
+        ],
+      },
+    ],
+
+    acknowledgment:
+      "I understand and agree to follow these options incubator trading rules.",
+  },
+
+  "options-instant-funding": {
+    title: "Options Instant Funding Trading Rules",
+    lastUpdated: "2026-04-04",
+    intro:
+      "Review these key rules before trading in your simulated options instant funding account.",
+
+    riskHighlight: {
+      title: "Important to Know",
+      text: "Trades held for 30 seconds or less are flagged, and profitable trades in that window may be removed from the account balance.",
+    },
+
+    summarySections: [
+      {
+        title: "Account Limits",
+        takeaway: "Stay within risk limits to keep your account active.",
+        items: [
+          "Account size: $25,000",
+          "Daily loss limit: $1,000",
+          "Max end-of-day drawdown: $3,750",
+          "Weekly payouts unlocked at $1,250 profit target",
+          "Drawdown high-water mark: $25,000",
+        ],
+      },
+      {
+        title: "Live Desk Progression",
+        takeaway:
+          "Strong performance may lead to more flexible payout terms.",
+        items: [
+          "TradeFundrr aims to move strong traders to its live pro trade desk",
+          "Once moved to the live desk, payout restrictions are removed",
+          "Traders on the live desk can request 100% of their profit share without limitations",
+        ],
+      },
+      {
+        title: "Trading Rules",
+        takeaway:
+          "Avoid restricted behavior and follow platform execution rules.",
+        items: [
+          "Trades held for 30 seconds or less are flagged",
+          "If a trade held 30 seconds or less is profitable, it will be removed from the account balance",
+          "If the trade is a complex strategy, notify support@tradefundrr.com",
+          "All trading must follow TradeFundrr platform rules and execution requirements",
+        ],
+      },
+      {
+        title: "Payout Terms",
+        takeaway: "Understand how and when payouts are issued.",
+        items: [
+          "Profit split: 80/20",
+          "Payout cycle: Weekly",
+          "Minimum payout amount: $250",
+          "Maximum payout amount: $15,000",
+        ],
+      },
+    ],
+
+    fullRules: [
+      {
+        title: "Account Parameters",
+        body: [
+          "Account size is $25,000.",
+          "Daily loss limit is $1,000.",
+          "Maximum end-of-day drawdown is $3,750.",
+          "Weekly payouts unlock at a $1,250 profit target.",
+          "Drawdown high-water mark is $25,000.",
+        ],
+      },
+      {
+        title: "Live Desk Progression",
+        body: [
+          "TradeFundrr aims to move traders to its live pro trade desk as soon as strong performance and risk management skills are observed.",
+          "Once you are moved to the live desk, all payout restrictions are removed, and you can request 100% of your profit share without limitations.",
+        ],
+      },
+      {
+        title: "Trading Restrictions",
+        body: [
+          "If a trade is held for 30 seconds or less, it will be flagged on your dashboard, and if it was profitable, it will be removed from the account balance.",
+          "If the trade is a complex strategy, please notify support@tradefundrr.com.",
+          "All trading must follow TradeFundrr platform rules and execution requirements.",
+        ],
+      },
+      {
+        title: "Payout Structure",
+        body: [
+          "Profit split is 80/20.",
+          "Payout cycle is weekly.",
+          "Minimum payout amount is $250.",
+          "Maximum payout amount is $15,000.",
+        ],
+      },
+    ],
+
+    acknowledgment:
+      "I understand and agree to follow these options instant funding trading rules.",
+  },
 };

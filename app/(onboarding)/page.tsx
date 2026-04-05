@@ -9,7 +9,7 @@ export default function AssetClassSelection() {
   const router = useRouter();
 
   function handleSelect(id: string) {
-    saveOnboarding({ assetClass: id as "futures" | "stocks" });
+    saveOnboarding({ assetClass: id as "futures" | "stocks" | "options" });
     router.push("/welcome");
   }
 

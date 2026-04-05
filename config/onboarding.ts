@@ -7,7 +7,25 @@ export const platforms: Record<string, { id: string; title: string }[]> = {
   stocks: [
     { id: "tradefundrr-web", title: "TradeFundrr Web Platform" },
   ],
+  options: [
+    { id: "dxtrade", title: "DX Trade" },
+  ],
 };
+
+export const optionsPrograms = [
+  {
+    id: "incubator",
+    title: "Incubator",
+    description:
+      "Build consistency in a simulated options environment with transparent rules and payout structure.",
+  },
+  {
+    id: "instant-funding",
+    title: "Instant Funding",
+    description:
+      "Start in a funded-style simulated options account with transparent rules and payout structure.",
+  },
+];
 
 export const tutorials: Record<string, string[]> = {
   ninjatrader: [
@@ -35,6 +53,13 @@ export const tutorials: Record<string, string[]> = {
     "Log in using your credentials",
     "Navigate to the dashboard",
     "Open a chart to begin trading",
+  ],
+  dxtrade: [
+    "Open DX Trade from your TradeFundrr dashboard",
+    "Log in using the credentials sent to your email",
+    "Confirm DX Feed market data is active",
+    "Review your buying power and account details",
+    "Open an options chain or watchlist to verify platform access",
   ],
 };
 
@@ -90,5 +115,10 @@ export const assetClasses = [
     id: "stocks",
     title: "Stocks",
     description: "Trade stocks using the TradeFundrr Web Platform",
+  },
+  {
+    id: "options",
+    title: "Options",
+    description: "Trade options using DX Trade with DX Feed market data",
   },
 ];

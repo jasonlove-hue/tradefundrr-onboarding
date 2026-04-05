@@ -1,8 +1,9 @@
 const STORAGE_KEY = "tradefundrr-onboarding";
 
 export interface OnboardingData {
-  assetClass: "futures" | "stocks";
+  assetClass: "futures" | "stocks" | "options";
   platform?: string;
+  optionsProgram?: "incubator" | "instant-funding";
   rulesAccepted?: boolean;
 }
 

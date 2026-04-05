@@ -8,6 +8,7 @@ import { rulesContent } from "@/config/rules";
 export default function Rules() {
   const router = useRouter();
   const [assetClass, setAssetClass] = useState<string | null>(null);
+  const [optionsProgram, setOptionsProgram] = useState<string | null>(null);
   const [accepted, setAccepted] = useState(false);
   const [showFullRules, setShowFullRules] = useState(true);
 
@@ -18,6 +19,9 @@ export default function Rules() {
       return;
     }
     setAssetClass(data.assetClass);
+    if (data.optionsProgram) {
+      setOptionsProgram(data.optionsProgram);
+    }
   }, [router]);
 
   function handleContinue() {
@@ -29,7 +33,8 @@ export default function Rules() {
 
   if (!assetClass) return null;
 
-  const rules = rulesContent[assetClass];
+  const rulesKey = assetClass === "options" ? `options-${optionsProgram}` : assetClass;
+  const rules = rulesContent[rulesKey];
   if (!rules) return null;
 
   return (
