@@ -36,40 +36,35 @@ export default function Tutorial() {
       <div className="w-full max-w-2xl">
         <div className="text-center">
           <h1 className="text-3xl text-tf-text">
-            Platform Setup
+            Access {title}
           </h1>
-          <p className="mt-3 text-lg text-tf-muted">
-            Follow these steps to set up{" "}
-            <span className="font-semibold text-tf-accent">{title}</span>
-          </p>
-          <p className="mt-2 text-sm text-tf-subtle">
-            This usually takes less than 5 minutes.
+          <p className="mt-3 text-tf-muted">
+            Use your dashboard and email credentials to access{" "}
+            <span className="font-semibold text-tf-accent">{title}</span> and
+            confirm everything is working.
           </p>
         </div>
 
-        <div className="mt-10 space-y-4">
+        <div className="mt-8 space-y-3">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="tf-card flex items-start gap-4 p-5"
+              className="tf-card flex items-start gap-4 px-5 py-4"
             >
-              <span className="tf-badge-accent flex h-8 w-8 text-sm">
+              <span className="tf-badge-accent flex h-6 w-6 shrink-0 text-xs">
                 {index + 1}
               </span>
-              <p className="pt-1 text-tf-muted">{step}</p>
+              <p className="text-sm text-tf-muted">{step}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-tf-subtle">
-          Next: Your Credentials
-        </p>
-        <div className="mt-3 text-center">
+        <div className="mt-8 text-center">
           <button
             onClick={() => router.push("/credentials")}
             className="tf-button-primary"
           >
-            I've Completed This
+            Continue
           </button>
         </div>
       </div>

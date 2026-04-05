@@ -43,8 +43,11 @@ export default function Rules() {
 
         {/* ── 1. Header ── */}
         <div className="text-center">
-          <h1 className="text-3xl text-tf-text">{rules.title}</h1>
-          <p className="mt-3 text-tf-muted">{rules.intro}</p>
+          <h1 className="text-3xl text-tf-text">Trading Rules & Risk Limits</h1>
+          <p className="mt-3 text-tf-muted">
+            You must follow these rules to keep your account active and eligible
+            for payouts.
+          </p>
           <p className="mt-2 text-xs text-tf-subtle">
             Last updated: {rules.lastUpdated}
           </p>

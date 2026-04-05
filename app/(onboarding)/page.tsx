@@ -25,10 +25,10 @@ export default function AssetClassSelection() {
           priority
         />
         <h1 className="text-3xl text-tf-text">
-          Welcome to TradeFundrr
+          Let's Get You Trading
         </h1>
         <p className="mt-3 text-lg text-tf-muted">
-          Select your market to begin
+          Select your market to continue
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">

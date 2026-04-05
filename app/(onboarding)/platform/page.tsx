@@ -46,26 +46,21 @@ export default function Platform() {
     return (
       <div className="tf-page">
         <div className="tf-card w-full max-w-lg p-10 text-center">
-          <h1 className="text-3xl text-tf-text">Your Platform</h1>
+          <h1 className="text-3xl text-tf-text">Platform Setup</h1>
           <p className="mt-4 text-lg text-tf-muted">
-            You will be using the{" "}
+            Your platform is{" "}
             <span className="font-semibold text-tf-accent">
               TradeFundrr Web Platform
-            </span>{" "}
-            to trade stocks.
+            </span>
           </p>
           <p className="mt-4 text-tf-subtle">
             No download required — accessible from any browser.
           </p>
-          <p className="mt-2 text-sm text-tf-subtle">
-            You can change this later if needed.
-          </p>
-          <p className="mt-6 text-xs text-tf-subtle">Next: Platform Setup</p>
           <button
             onClick={() => handleSelect("tradefundrr-web")}
-            className="tf-button-primary mt-4"
+            className="tf-button-primary mt-8"
           >
-            Select Platform
+            Continue
           </button>
         </div>
       </div>
@@ -79,9 +74,9 @@ export default function Platform() {
       return (
         <div className="tf-page">
           <div className="w-full max-w-2xl text-center">
-            <h1 className="text-3xl text-tf-text">Choose Your Program</h1>
+            <h1 className="text-3xl text-tf-text">Select Your Program</h1>
             <p className="mt-3 text-lg text-tf-muted">
-              Select the options program you'd like to join.
+              Choose your options program to continue.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -109,25 +104,23 @@ export default function Platform() {
     return (
       <div className="tf-page">
         <div className="tf-card w-full max-w-lg p-10 text-center">
-          <h1 className="text-3xl text-tf-text">Your Platform</h1>
+          <h1 className="text-3xl text-tf-text">Platform Setup</h1>
           <p className="mt-4 text-lg text-tf-muted">
-            You will be using{" "}
+            Your platform is{" "}
             <span className="font-semibold text-tf-accent">
               DX Trade
             </span>{" "}
             with{" "}
-            <span className="font-semibold text-tf-accent">DX Feed</span>{" "}
-            for your options account.
+            <span className="font-semibold text-tf-accent">DX Feed</span>
           </p>
           <p className="mt-4 text-tf-subtle">
             Access DX Trade directly from your TradeFundrr dashboard.
           </p>
-          <p className="mt-6 text-xs text-tf-subtle">Next: Platform Setup</p>
           <button
             onClick={() => handleSelect("dxtrade")}
-            className="tf-button-primary mt-4"
+            className="tf-button-primary mt-8"
           >
-            Select Platform
+            Continue
           </button>
         </div>
       </div>
@@ -140,12 +133,9 @@ export default function Platform() {
   return (
     <div className="tf-page">
       <div className="w-full max-w-2xl text-center">
-        <h1 className="text-3xl text-tf-text">Choose Your Platform</h1>
+        <h1 className="text-3xl text-tf-text">Platform Setup</h1>
         <p className="mt-3 text-lg text-tf-muted">
-          Select the trading platform you'd like to use.
-        </p>
-        <p className="mt-2 text-sm text-tf-subtle">
-          You can change this later if needed.
+          Select your trading platform to continue.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">

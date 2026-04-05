@@ -6,13 +6,13 @@ import Image from "next/image";
 import { getCompletedStep } from "@/lib/storage";
 
 const steps = [
-  { label: "Asset Selection", description: "Choose what you want to trade" },
-  { label: "Welcome", description: "Overview of your onboarding" },
-  { label: "Platform", description: "Pick your trading platform" },
-  { label: "Tutorial", description: "Step-by-step platform setup" },
-  { label: "Credentials", description: "Your login details" },
-  { label: "Rules", description: "Review trading rules" },
-  { label: "Complete", description: "You're ready to trade" },
+  { label: "Select Market", description: "Choose your asset class" },
+  { label: "Get Started", description: "Quick overview" },
+  { label: "Platform Setup", description: "Select and configure" },
+  { label: "Setup Complete", description: "Confirm your platform" },
+  { label: "Access Account", description: "Your login details" },
+  { label: "Rules & Limits", description: "Required before trading" },
+  { label: "Ready to Trade", description: "You're all set" },
 ];
 
 const stepPaths = ["/", "/welcome", "/platform", "/tutorial", "/credentials", "/rules", "/complete"];

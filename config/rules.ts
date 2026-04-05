@@ -257,10 +257,17 @@ export const rulesContent: Record<string, AssetRules> = {
         takeaway:
           "Avoid restricted behavior and follow platform execution rules.",
         items: [
-          "Trades held for 30 seconds or less are flagged",
-          "If a trade held 30 seconds or less is profitable, it will be removed from the account balance",
-          "If the trade is a complex strategy, notify support@tradefundrr.com",
+          "Trades held for 30 seconds or less are flagged, and if profitable, they will be removed from the account balance",
           "All trading must follow TradeFundrr platform rules and execution requirements",
+        ],
+      },
+      {
+        title: "Payout Eligibility",
+        takeaway:
+          "Consistency is required before payouts are unlocked.",
+        items: [
+          "At least $250 profit must be achieved over a minimum of 5 non-consecutive trading days",
+          "A total profit of at least $1,250 is required to qualify for payouts",
         ],
       },
       {
@@ -299,6 +306,13 @@ export const rulesContent: Record<string, AssetRules> = {
           "If a trade is held for 30 seconds or less, it will be flagged on your dashboard, and if it was profitable, it will be removed from the account balance.",
           "If the trade is a complex strategy, please notify support@tradefundrr.com.",
           "All trading must follow TradeFundrr platform rules and execution requirements.",
+        ],
+      },
+      {
+        title: "Payout Eligibility",
+        body: [
+          "At least $250 profit must be achieved over a minimum of 5 non-consecutive trading days.",
+          "A total profit of at least $1,250 is required to qualify for payouts.",
         ],
       },
       {
@@ -354,10 +368,17 @@ export const rulesContent: Record<string, AssetRules> = {
         takeaway:
           "Avoid restricted behavior and follow platform execution rules.",
         items: [
-          "Trades held for 30 seconds or less are flagged",
-          "If a trade held 30 seconds or less is profitable, it will be removed from the account balance",
-          "If the trade is a complex strategy, notify support@tradefundrr.com",
+          "Trades held for 30 seconds or less are flagged, and if profitable, they will be removed from the account balance",
           "All trading must follow TradeFundrr platform rules and execution requirements",
+        ],
+      },
+      {
+        title: "Payout Eligibility",
+        takeaway:
+          "Consistency is required before payouts are unlocked.",
+        items: [
+          "At least $250 profit must be achieved over a minimum of 5 non-consecutive trading days",
+          "A total profit of at least $1,250 is required to qualify for payouts",
         ],
       },
       {
@@ -396,6 +417,13 @@ export const rulesContent: Record<string, AssetRules> = {
           "If a trade is held for 30 seconds or less, it will be flagged on your dashboard, and if it was profitable, it will be removed from the account balance.",
           "If the trade is a complex strategy, please notify support@tradefundrr.com.",
           "All trading must follow TradeFundrr platform rules and execution requirements.",
+        ],
+      },
+      {
+        title: "Payout Eligibility",
+        body: [
+          "At least $250 profit must be achieved over a minimum of 5 non-consecutive trading days.",
+          "A total profit of at least $1,250 is required to qualify for payouts.",
         ],
       },
       {
