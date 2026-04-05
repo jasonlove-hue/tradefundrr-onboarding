@@ -354,16 +354,6 @@ export const rulesContent: Record<string, AssetRules> = {
         ],
       },
       {
-        title: "Live Desk Progression",
-        takeaway:
-          "Strong performance may lead to more flexible payout terms.",
-        items: [
-          "TradeFundrr aims to move strong traders to its live pro trade desk",
-          "Once moved to the live desk, payout restrictions are removed",
-          "Traders on the live desk can request 100% of their profit share without limitations",
-        ],
-      },
-      {
         title: "Trading Rules",
         takeaway:
           "Avoid restricted behavior and follow platform execution rules.",
@@ -402,13 +392,6 @@ export const rulesContent: Record<string, AssetRules> = {
           "Maximum end-of-day drawdown is $3,750.",
           "Weekly payouts unlock at a $1,250 profit target.",
           "Drawdown high-water mark is $25,000.",
-        ],
-      },
-      {
-        title: "Live Desk Progression",
-        body: [
-          "TradeFundrr aims to move traders to its live pro trade desk as soon as strong performance and risk management skills are observed.",
-          "Once you are moved to the live desk, all payout restrictions are removed, and you can request 100% of your profit share without limitations.",
         ],
       },
       {

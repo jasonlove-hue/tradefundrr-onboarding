@@ -27,7 +27,7 @@ export default function Welcome() {
         </h1>
 
         <p className="mt-4 text-lg text-tf-muted">
-          Market:{" "}
+          Asset Class:{" "}
           <span className="font-semibold capitalize text-tf-accent">
             {assetClass}
           </span>

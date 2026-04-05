@@ -6,9 +6,9 @@ import Image from "next/image";
 import { getCompletedStep } from "@/lib/storage";
 
 const steps = [
-  { label: "Select Market", description: "Choose your asset class" },
+  { label: "Select Asset Class", description: "Choose your asset class" },
   { label: "Get Started", description: "Quick overview" },
-  { label: "Platform Setup", description: "Select your platform" },
+  { label: "Platform Access", description: "Your trading platform" },
   { label: "Account Created", description: "Platform confirmed" },
   { label: "Login Details", description: "Credentials sent" },
   { label: "Rules & Limits", description: "Required before trading" },

@@ -48,9 +48,6 @@ export default function AssetClassSelection() {
           ))}
         </div>
 
-        <p className="mt-6 text-xs text-tf-subtle">
-          Not sure? Check your confirmation email for your selected program.
-        </p>
       </div>
     </div>
   );

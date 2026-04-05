@@ -33,10 +33,10 @@ export default function Tutorial() {
       <div className="tf-card w-full max-w-lg p-10 text-center">
         <h1 className="text-3xl text-tf-text">Account Created</h1>
         <p className="mt-4 text-tf-muted">
-          Your trading account and platform have been configured.
+          Your trading account is ready for trading.
         </p>
         <p className="mt-3 text-sm text-tf-subtle">
-          Next, we'll confirm your login details.
+          You can view your account in your TradeFundrr dashboard.
         </p>
 
         <button

@@ -11,7 +11,7 @@ export default function Rules() {
   const [optionsProgram, setOptionsProgram] = useState<string | null>(null);
   const [accepted, setAccepted] = useState(false);
   const [disclosureAccepted, setDisclosureAccepted] = useState(false);
-  const [showFullRules, setShowFullRules] = useState(true);
+  const [showFullRulesModal, setShowFullRulesModal] = useState(false);
   const [showDisclosureModal, setShowDisclosureModal] = useState(false);
 
   useEffect(() => {
@@ -55,12 +55,36 @@ export default function Rules() {
           <p className="mt-2 text-xs text-tf-subtle">
             Last updated: {rules.lastUpdated}
           </p>
+          <p className="mt-4 text-sm text-tf-subtle">
+            Review the key rules below. Full details and disclosures are
+            available before you continue.
+          </p>
         </div>
 
-        {/* ── 2. Risk Highlight ── */}
-        <div className="mt-8 rounded-xl border border-tf-primary/20 bg-tf-primary/5 p-5">
+        {/* ── 2. Full Rule Details (trigger card) ── */}
+        <div className="mt-8 rounded-xl border border-tf-border bg-tf-surface/50">
+          <button
+            onClick={() => setShowFullRulesModal(true)}
+            className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-white/[0.02]"
+          >
+            <div>
+              <h2 className="font-heading text-base font-semibold text-tf-text">
+                Full Rule Details
+              </h2>
+              <p className="mt-0.5 text-xs text-tf-subtle">
+                Review the complete rule language before continuing.
+              </p>
+            </div>
+            <span className="ml-4 text-sm font-medium text-tf-accent">
+              Show
+            </span>
+          </button>
+        </div>
+
+        {/* ── 3. Important to Know (yellow warning) ── */}
+        <div className="mt-8 rounded-xl border border-amber-500/20 bg-amber-500/5 p-5">
           <div className="flex items-start gap-3">
-            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-tf-primary/15 text-xs font-bold text-tf-primary">
+            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-xs font-bold text-amber-400">
               !
             </span>
             <div>
@@ -74,13 +98,13 @@ export default function Rules() {
           </div>
         </div>
 
-        {/* ── 3. Key Rules Summary ── */}
+        {/* ── 4. Key Rules Summary ── */}
         <div className="mt-10">
           <h2 className="font-heading text-lg font-semibold text-tf-text">
             Key Rules
           </h2>
           <p className="mt-1 text-sm text-tf-subtle">
-            The most important things to know before you start trading.
+            The most important things to understand before you start trading.
           </p>
 
           <div className="mt-6 space-y-8">
@@ -109,58 +133,8 @@ export default function Rules() {
           </div>
         </div>
 
-        {/* ── 4. Full Rule Details ── */}
-        <div className="mt-10 rounded-xl border border-tf-border bg-tf-surface/50">
-          <button
-            onClick={() => setShowFullRules(!showFullRules)}
-            className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-white/[0.02]"
-          >
-            <div>
-              <h2 className="font-heading text-base font-semibold text-tf-text">
-                Full Rule Details
-              </h2>
-              <p className="mt-0.5 text-xs text-tf-subtle">
-                Review the exact rule language before continuing.
-              </p>
-            </div>
-            <span className="ml-4 text-sm font-medium text-tf-accent">
-              {showFullRules ? "Hide" : "Show"}
-            </span>
-          </button>
-
-          {showFullRules && (
-            <div className="border-t border-tf-border px-6 pb-6 pt-4">
-              <div className="space-y-6">
-                {rules.fullRules.map((section, i) => (
-                  <div key={i}>
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-tf-border text-[10px] font-semibold text-tf-subtle">
-                        {i + 1}
-                      </span>
-                      <h3 className="text-xs font-semibold uppercase tracking-wider text-tf-subtle">
-                        {section.title}
-                      </h3>
-                    </div>
-                    <ul className="ml-7 space-y-1.5">
-                      {section.body.map((line, j) => (
-                        <li
-                          key={j}
-                          className="flex items-start gap-2 text-sm leading-relaxed text-tf-muted/80"
-                        >
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-tf-subtle/60" />
-                          {line}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-
         {/* ── 5. Disclaimer ── */}
-        <div className="tf-disclaimer mt-8">
+        <div className="tf-disclaimer mt-12">
           <p className="text-sm text-tf-accent">
             This is a simulated trading environment. These rules apply to your
             simulated account, not a live brokerage account.
@@ -168,7 +142,7 @@ export default function Rules() {
         </div>
 
         {/* ── 6. Trader Commitment ── */}
-        <div className="mt-8 rounded-xl border border-tf-accent/20 bg-tf-accent/5 p-6">
+        <div className="mt-12 rounded-xl border border-tf-accent/20 bg-tf-accent/5 p-6">
           <h2 className="font-heading text-lg font-semibold text-tf-text">
             Your Trading Commitment
           </h2>
@@ -218,12 +192,12 @@ export default function Rules() {
             htmlFor="accept-rules"
             className="cursor-pointer text-tf-muted"
           >
-            I understand and commit to trading within these rules
+            I understand and commit to trading within these program rules
           </label>
         </div>
 
         {/* ── 8. Important Disclosures ── */}
-        <div className="mt-8">
+        <div className="mt-12">
           <h2 className="font-heading text-lg font-semibold text-tf-text">
             Important Disclosures
           </h2>
@@ -278,9 +252,78 @@ export default function Rules() {
         </div>
       </div>
 
+      {/* ── Full Rules Modal ── */}
+      {showFullRulesModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowFullRulesModal(false);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setShowFullRulesModal(false);
+          }}
+        >
+          <div className="relative max-h-[80vh] w-full max-w-2xl overflow-y-auto rounded-xl border border-tf-border bg-tf-surface p-8">
+            <button
+              onClick={() => setShowFullRulesModal(false)}
+              className="absolute right-4 top-4 text-tf-subtle hover:text-tf-text"
+            >
+              Close
+            </button>
+
+            <h2 className="font-heading text-2xl font-bold text-tf-text">
+              Full Rule Details
+            </h2>
+
+            <div className="mt-6 space-y-6">
+              {rules.fullRules.map((section, i) => (
+                <div key={i}>
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-tf-border text-[10px] font-semibold text-tf-subtle">
+                      {i + 1}
+                    </span>
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-tf-subtle">
+                      {section.title}
+                    </h3>
+                  </div>
+                  <ul className="ml-7 space-y-1.5">
+                    {section.body.map((line, j) => (
+                      <li
+                        key={j}
+                        className="flex items-start gap-2 text-sm leading-relaxed text-tf-muted/80"
+                      >
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-tf-subtle/60" />
+                        {line}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <button
+                onClick={() => setShowFullRulesModal(false)}
+                className="tf-button-primary"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ── Disclosure Modal ── */}
       {showDisclosureModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowDisclosureModal(false);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setShowDisclosureModal(false);
+          }}
+        >
           <div className="relative max-h-[80vh] w-full max-w-2xl overflow-y-auto rounded-xl border border-tf-border bg-tf-surface p-8">
             <button
               onClick={() => setShowDisclosureModal(false)}

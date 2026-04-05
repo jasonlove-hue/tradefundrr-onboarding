@@ -58,7 +58,35 @@ export default function Complete() {
             </ul>
           </div>
 
-          <div className="mt-8 space-y-3">
+          {/* How Progression Works */}
+          <div className="mt-8 rounded-xl border border-tf-border bg-tf-surface/50 p-6 text-left">
+            <h2 className="font-heading text-base font-semibold text-tf-text">
+              How Progression to a Live Trading Account Works
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-tf-muted/80">
+              Our goal is to identify traders who demonstrate consistent
+              performance and strong risk management. Based on this, traders may
+              be considered for progression to a live trading environment over
+              time. Progression is not guaranteed and depends on overall account
+              performance and discipline.
+            </p>
+            <ul className="mt-4 space-y-2">
+              <li className="flex items-start gap-2 text-sm text-tf-subtle">
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-tf-subtle/60" />
+                Consistency matters more than any single trade.
+              </li>
+              <li className="flex items-start gap-2 text-sm text-tf-subtle">
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-tf-subtle/60" />
+                Risk management is a key part of long-term evaluation.
+              </li>
+              <li className="flex items-start gap-2 text-sm text-tf-subtle">
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-tf-subtle/60" />
+                Progression decisions are based on overall account behavior.
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-6 space-y-3">
             <a
               href="https://dashboard.tradefundrr.com/Client"
               target="_blank"
