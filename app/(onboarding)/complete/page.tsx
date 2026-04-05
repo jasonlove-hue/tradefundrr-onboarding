@@ -117,6 +117,10 @@ export default function Complete() {
         <p className="mt-6 text-center text-sm text-tf-subtle">
           Need help later? You can access guides anytime from your dashboard.
         </p>
+        <p className="mt-3 text-center text-xs text-tf-subtle/70">
+          Trading involves risk. Make sure you understand all program rules
+          before trading.
+        </p>
       </div>
     </div>
   );

@@ -8,11 +8,11 @@ import { getCompletedStep } from "@/lib/storage";
 const steps = [
   { label: "Select Market", description: "Choose your asset class" },
   { label: "Get Started", description: "Quick overview" },
-  { label: "Platform Setup", description: "Select and configure" },
-  { label: "Setup Complete", description: "Confirm your platform" },
-  { label: "Access Account", description: "Your login details" },
+  { label: "Platform Setup", description: "Select your platform" },
+  { label: "Account Created", description: "Platform confirmed" },
+  { label: "Login Details", description: "Credentials sent" },
   { label: "Rules & Limits", description: "Required before trading" },
-  { label: "Ready to Trade", description: "You're all set" },
+  { label: "Ready to Trade", description: "Start trading" },
 ];
 
 const stepPaths = ["/", "/welcome", "/platform", "/tutorial", "/credentials", "/rules", "/complete"];

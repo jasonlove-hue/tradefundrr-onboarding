@@ -31,13 +31,12 @@ export default function Tutorial() {
   return (
     <div className="tf-page">
       <div className="tf-card w-full max-w-lg p-10 text-center">
-        <h1 className="text-3xl text-tf-text">You're Almost Ready</h1>
+        <h1 className="text-3xl text-tf-text">Account Created</h1>
         <p className="mt-4 text-tf-muted">
-          Your account has been set up successfully.
+          Your trading account and platform have been configured.
         </p>
-        <p className="mt-2 text-sm text-tf-subtle">
-          Next, you'll access your login details and finish getting ready to
-          trade.
+        <p className="mt-3 text-sm text-tf-subtle">
+          Next, we'll confirm your login details.
         </p>
 
         <button

@@ -5,6 +5,7 @@ export interface OnboardingData {
   platform?: string;
   optionsProgram?: "incubator" | "instant-funding";
   rulesAccepted?: boolean;
+  disclosureAccepted?: boolean;
 }
 
 export function saveOnboarding(data: OnboardingData): void {

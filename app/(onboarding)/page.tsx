@@ -25,10 +25,10 @@ export default function AssetClassSelection() {
           priority
         />
         <h1 className="text-3xl text-tf-text">
-          Let's Get You Trading
+          Continue Your Setup
         </h1>
         <p className="mt-3 text-lg text-tf-muted">
-          Select your market to continue
+          Select your asset class to continue your onboarding.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -47,6 +47,10 @@ export default function AssetClassSelection() {
             </button>
           ))}
         </div>
+
+        <p className="mt-6 text-xs text-tf-subtle">
+          Not sure? Check your confirmation email for your selected program.
+        </p>
       </div>
     </div>
   );
