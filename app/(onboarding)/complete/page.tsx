@@ -16,7 +16,6 @@ function getPlatformTitle(platformId: string): string {
 export default function Complete() {
   const router = useRouter();
   const [data, setData] = useState<OnboardingData | null>(null);
-  const [showVideos, setShowVideos] = useState(false);
 
   useEffect(() => {
     const saved = getOnboarding();
@@ -115,54 +114,8 @@ export default function Complete() {
           </div>
         </div>
 
-        {/* Optional video support section */}
-        <div className="mt-6 rounded-xl border border-tf-border bg-tf-surface">
-          <button
-            onClick={() => setShowVideos(!showVideos)}
-            className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-white/[0.02]"
-          >
-            <div>
-              <p className="text-sm font-semibold text-tf-text">
-                Need help getting started?
-              </p>
-              <p className="mt-0.5 text-xs text-tf-subtle">
-                Watch setup walkthroughs and platform help videos.
-              </p>
-            </div>
-            <span className="ml-4 text-sm font-medium text-tf-accent">
-              {showVideos ? "Hide" : "Watch"}
-            </span>
-          </button>
-
-          {showVideos && (
-            <div className="border-t border-tf-border px-6 pb-6 pt-4">
-              <div className="overflow-hidden rounded-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/videoseries?list=PLxYour_Playlist_ID"
-                  title="TradeFundrr Setup Guides"
-                  className="aspect-video w-full rounded-lg"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <p className="mt-3 text-center text-xs text-tf-subtle">
-                Visit{" "}
-                <a
-                  href="https://www.youtube.com/@tradefundrr/videos"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-tf-accent hover:underline"
-                >
-                  TradeFundrr on YouTube
-                </a>{" "}
-                for more tutorials.
-              </p>
-            </div>
-          )}
-        </div>
-
         <p className="mt-6 text-center text-sm text-tf-subtle">
-          You can revisit this setup anytime from your dashboard.
+          Need help later? You can access guides anytime from your dashboard.
         </p>
       </div>
     </div>

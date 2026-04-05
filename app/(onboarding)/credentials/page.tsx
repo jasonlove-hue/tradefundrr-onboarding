@@ -22,12 +22,13 @@ export default function Credentials() {
   return (
     <div className="tf-page">
       <div className="tf-card w-full max-w-lg p-10 text-center">
-        <h1 className="text-3xl text-tf-text">Credentials Sent</h1>
+        <h1 className="text-3xl text-tf-text">Your Account Is Ready</h1>
         <p className="mt-4 text-tf-muted">
           Your login details and dashboard access have been sent to your email.
         </p>
-        <p className="mt-2 text-sm text-tf-subtle">
-          You'll use them after completing setup.
+        <p className="mt-3 text-sm text-tf-subtle">
+          Next, we'll review the key rules, risk parameters, and show you where
+          to access FAQs and video tutorials.
         </p>
 
         <button
