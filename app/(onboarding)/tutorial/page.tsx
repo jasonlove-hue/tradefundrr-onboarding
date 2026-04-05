@@ -31,12 +31,10 @@ export default function Tutorial() {
   return (
     <div className="tf-page">
       <div className="tf-card w-full max-w-lg p-10 text-center">
-        <h1 className="text-3xl text-tf-text">Account Created</h1>
+        <h1 className="text-3xl text-tf-text">Your Account Is Ready</h1>
         <p className="mt-4 text-tf-muted">
-          Your trading account is ready for trading.
-        </p>
-        <p className="mt-3 text-sm text-tf-subtle">
-          You can view your account in your TradeFundrr dashboard.
+          Your simulated trading account has been created. You can view it
+          anytime from your TradeFundrr dashboard.
         </p>
 
         <button

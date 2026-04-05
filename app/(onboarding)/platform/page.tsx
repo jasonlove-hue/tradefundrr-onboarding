@@ -59,22 +59,15 @@ export default function Platform() {
       <div className="tf-page">
         <div className="w-full max-w-lg text-center">
           <h1 className="text-3xl text-tf-text">
-            How You'll Access Your Platform
+            Your Trading Platform
           </h1>
           <p className="mt-4 text-tf-muted">
-            Your account is already set up and ready to use.
-          </p>
-          <p className="mt-2 text-tf-muted">You'll be trading on:</p>
-
-          <div className="tf-card mt-6 p-8 text-left">
-            <h2 className="font-heading text-lg font-semibold text-tf-text">
+            You'll be trading on the{" "}
+            <span className="font-semibold text-tf-accent">
               TradeFundrr Web Platform
-            </h2>
-            <p className="mt-2 text-sm text-tf-subtle">
-              Access your account directly from your browser. No download
-              required.
-            </p>
-          </div>
+            </span>{" "}
+            — accessible directly from your browser. No downloads needed.
+          </p>
 
           <button
             onClick={() => handleContinue("tradefundrr-web")}
@@ -93,9 +86,10 @@ export default function Platform() {
       return (
         <div className="tf-page">
           <div className="w-full max-w-2xl text-center">
-            <h1 className="text-3xl text-tf-text">Select Your Program</h1>
-            <p className="mt-3 text-lg text-tf-muted">
-              Choose your options program to continue.
+            <h1 className="text-3xl text-tf-text">Confirm Your Program</h1>
+            <p className="mt-3 text-tf-muted">
+              We need to confirm which program you enrolled in so we can show
+              you the correct rules and account details.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -114,6 +108,10 @@ export default function Platform() {
                 </button>
               ))}
             </div>
+
+            <p className="mt-6 text-xs text-tf-subtle">
+              You'll review your rules and limits before you start trading.
+            </p>
           </div>
         </div>
       );
@@ -122,22 +120,14 @@ export default function Platform() {
     return (
       <div className="tf-page">
         <div className="w-full max-w-lg text-center">
-          <h1 className="text-3xl text-tf-text">
-            How You'll Access Your Platform
-          </h1>
+          <h1 className="text-3xl text-tf-text">Your Trading Platform</h1>
           <p className="mt-4 text-tf-muted">
-            Your account is already set up and ready to use.
-          </p>
-          <p className="mt-2 text-tf-muted">You'll be trading on:</p>
-
-          <div className="tf-card mt-6 p-8 text-left">
-            <h2 className="font-heading text-lg font-semibold text-tf-text">
+            You'll be trading on{" "}
+            <span className="font-semibold text-tf-accent">
               DX Trade with DX Feed
-            </h2>
-            <p className="mt-2 text-sm text-tf-subtle">
-              Access your platform directly from your TradeFundrr dashboard.
-            </p>
-          </div>
+            </span>{" "}
+            — accessible directly from your TradeFundrr dashboard.
+          </p>
 
           <button
             onClick={() => handleContinue("dxtrade")}

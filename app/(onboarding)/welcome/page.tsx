@@ -22,9 +22,7 @@ export default function Welcome() {
   return (
     <div className="tf-page">
       <div className="tf-card w-full max-w-lg p-10 text-center">
-        <h1 className="text-3xl text-tf-text">
-          You're in. Let's get you set up.
-        </h1>
+        <h1 className="text-3xl text-tf-text">You're In</h1>
 
         <p className="mt-4 text-lg text-tf-muted">
           Asset Class:{" "}
@@ -34,14 +32,14 @@ export default function Welcome() {
         </p>
 
         <p className="mt-4 text-tf-subtle">
-          This takes just a couple minutes. We'll walk you through everything.
+          Let's walk you through a few quick details before you start trading.
         </p>
 
         <button
           onClick={() => router.push("/platform")}
           className="tf-button-primary mt-8"
         >
-          Start Setup
+          Continue
         </button>
       </div>
     </div>
